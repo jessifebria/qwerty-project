@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aqG-qS-ln0">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Keyboard View Controller-->
+        <scene sceneID="VSw-TT-b94">
+            <objects>
+                <viewController id="aqG-qS-ln0" customClass="KeyboardViewController" customModule="QwertyKeyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6HO-Aa-CqU">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="thg-FB-9gX" userLabel="OuterView">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="iDL-PX-Ap7">
+                                        <rect key="frame" x="3" y="8" width="384" height="758"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M4v-Rj-OFx">
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="142"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="cd7-W6-CDl" userLabel="row1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="142"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRE-n6-QgU">
+                                                                <rect key="frame" x="0.0" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="q">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="qButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="1s2-Ed-dsZ"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSG-ts-piB">
+                                                                <rect key="frame" x="39" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="w">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="wButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="PkE-dO-m85"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0z-jR-pyP">
+                                                                <rect key="frame" x="78" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="e">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="eButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="A9h-dX-dfJ"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0U-t2-oJ3">
+                                                                <rect key="frame" x="117" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="r">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="rButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="v2L-VC-hoI"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwJ-RY-6JQ">
+                                                                <rect key="frame" x="156" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="t">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="tButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="shk-Yq-1GS"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3C-fk-t86">
+                                                                <rect key="frame" x="195" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="y">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="yButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="pQ8-S8-mCU"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJU-0o-aFP">
+                                                                <rect key="frame" x="234" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="u">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="uButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="Wwa-ml-VBq"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rF6-Fd-Zgt">
+                                                                <rect key="frame" x="273" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="i">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="iButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="I7m-Tb-xVK"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DC7-qX-gdd">
+                                                                <rect key="frame" x="312" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="o">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="oButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="IGc-vY-57i"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbm-qX-4cD">
+                                                                <rect key="frame" x="351" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="p">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="pButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="R30-RW-2We"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="cd7-W6-CDl" secondAttribute="bottom" id="FtB-qz-ShF"/>
+                                                    <constraint firstItem="cd7-W6-CDl" firstAttribute="top" secondItem="M4v-Rj-OFx" secondAttribute="top" id="be4-dZ-0jO"/>
+                                                    <constraint firstItem="cd7-W6-CDl" firstAttribute="leading" secondItem="M4v-Rj-OFx" secondAttribute="leading" id="h5U-yx-FCj"/>
+                                                    <constraint firstAttribute="trailing" secondItem="cd7-W6-CDl" secondAttribute="trailing" id="pjG-Qh-wDH"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBP-u4-Cgg">
+                                                <rect key="frame" x="0.0" y="154" width="384" height="142"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="jPe-Kr-xns" userLabel="row1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="142"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOo-y5-EOg">
+                                                                <rect key="frame" x="0.0" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="q">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="qButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="wYc-Oy-7No"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFD-YH-bh1">
+                                                                <rect key="frame" x="39" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="w">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="wButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="tri-MA-W4K"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esn-Ob-Njc">
+                                                                <rect key="frame" x="78" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="e">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="eButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="uAP-qA-mvV"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4WU-Em-Qzb">
+                                                                <rect key="frame" x="117" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="r">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="rButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="P57-i8-VIo"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feg-OE-mph">
+                                                                <rect key="frame" x="156" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="t">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="tButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="7r6-wC-Sq6"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VjQ-pc-3o9">
+                                                                <rect key="frame" x="195" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="y">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="yButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="qoC-u1-Pcl"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBo-mY-1sn">
+                                                                <rect key="frame" x="234" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="u">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="uButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="ebf-H7-G8N"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX5-Qs-54d">
+                                                                <rect key="frame" x="273" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="i">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="iButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="BBI-3S-UJi"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Yk-07-2ch">
+                                                                <rect key="frame" x="312" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="o">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="oButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="09x-Zt-PJN"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itk-z5-cEa">
+                                                                <rect key="frame" x="351" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="p">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="pButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="Zft-Cs-hlB"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.60609471800000003" green="0.110549219" blue="0.1215417162" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="jPe-Kr-xns" secondAttribute="trailing" id="35T-FN-rcF"/>
+                                                    <constraint firstAttribute="bottom" secondItem="jPe-Kr-xns" secondAttribute="bottom" id="L8W-2J-bxH"/>
+                                                    <constraint firstItem="jPe-Kr-xns" firstAttribute="leading" secondItem="hBP-u4-Cgg" secondAttribute="leading" id="V2R-a5-cY0"/>
+                                                    <constraint firstItem="jPe-Kr-xns" firstAttribute="top" secondItem="hBP-u4-Cgg" secondAttribute="top" id="nTH-3n-czl"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CKu-KE-U6A">
+                                                <rect key="frame" x="0.0" y="308" width="384" height="142"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="BRr-o4-Pob" userLabel="row2">
+                                                        <rect key="frame" x="19.666666666666657" y="0.0" width="345" height="142"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGO-sa-5vh">
+                                                                <rect key="frame" x="0.0" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="a">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="aButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="2Oe-4M-acP"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6Z-dt-neS">
+                                                                <rect key="frame" x="39" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="s">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="sButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="SG0-Aj-YSm"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3SQ-Th-KjE">
+                                                                <rect key="frame" x="78" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="d">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="dButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="vvq-jB-nAi"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhl-ub-SeH">
+                                                                <rect key="frame" x="117" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="f">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="fButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="0pg-ye-xLE"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KY5-27-sk9">
+                                                                <rect key="frame" x="156" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="g">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="gButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="Zoq-K2-to6"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCr-jq-JW8">
+                                                                <rect key="frame" x="195" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="h">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="hButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="mwK-Zj-L4c"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R15-Ij-Dle">
+                                                                <rect key="frame" x="234.00000000000003" y="0.0" width="32.999999999999972" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="j">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="jButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="9wl-fC-LPC"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqi-hT-2b9">
+                                                                <rect key="frame" x="273" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="k">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="kButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="0O7-Ua-35S"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEF-VE-4OZ">
+                                                                <rect key="frame" x="312" y="0.0" width="33" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="l">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="lButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="Vge-jp-GLh"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                <constraints>
+                                                    <constraint firstItem="BRr-o4-Pob" firstAttribute="centerX" secondItem="CKu-KE-U6A" secondAttribute="centerX" id="Be8-V2-tUq"/>
+                                                    <constraint firstAttribute="bottom" secondItem="BRr-o4-Pob" secondAttribute="bottom" id="ErR-hh-kSB"/>
+                                                    <constraint firstItem="BRr-o4-Pob" firstAttribute="top" secondItem="CKu-KE-U6A" secondAttribute="top" id="x1E-l4-j7z"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eSl-gp-ojY">
+                                                <rect key="frame" x="0.0" y="462" width="384" height="142"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="A2p-tV-bD2" userLabel="row3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="142"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEQ-az-Sts">
+                                                                <rect key="frame" x="0.0" y="0.0" width="43" height="142"/>
+                                                                <color key="backgroundColor" name="standardDarkButton"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal">
+                                                                    <color key="titleColor" name="darkButtonText"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ScA-Vg-WGx">
+                                                                <rect key="frame" x="58.666666666666657" y="0.0" width="267" height="142"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yt7-Wg-HDF">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="33" height="142"/>
+                                                                        <color key="backgroundColor" name="darkButtonText"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                        <state key="normal" title="z">
+                                                                            <color key="titleColor" name="lightButtonText"/>
+                                                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                <integer key="value" value="5"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="zButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="rKw-Ii-cj4"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgK-yZ-amv">
+                                                                        <rect key="frame" x="39.000000000000007" y="0.0" width="32.999999999999993" height="142"/>
+                                                                        <color key="backgroundColor" name="darkButtonText"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                        <state key="normal" title="x">
+                                                                            <color key="titleColor" name="lightButtonText"/>
+                                                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                <integer key="value" value="5"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="xButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="3Nq-38-cAS"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBg-N1-6MQ">
+                                                                        <rect key="frame" x="78" y="0.0" width="33" height="142"/>
+                                                                        <color key="backgroundColor" name="darkButtonText"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                        <state key="normal" title="c">
+                                                                            <color key="titleColor" name="lightButtonText"/>
+                                                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                <integer key="value" value="5"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="cButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="qgC-zD-7KV"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pby-Tz-nv4">
+                                                                        <rect key="frame" x="117" y="0.0" width="33" height="142"/>
+                                                                        <color key="backgroundColor" name="darkButtonText"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                        <state key="normal" title="v">
+                                                                            <color key="titleColor" name="lightButtonText"/>
+                                                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                <integer key="value" value="5"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="vButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="F2g-Jk-t1h"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Snr-8f-8Mh">
+                                                                        <rect key="frame" x="156" y="0.0" width="33" height="142"/>
+                                                                        <color key="backgroundColor" name="darkButtonText"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                        <state key="normal" title="b">
+                                                                            <color key="titleColor" name="lightButtonText"/>
+                                                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                <integer key="value" value="5"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="bButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="vUh-De-RpJ"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXz-RH-R2D">
+                                                                        <rect key="frame" x="195.00000000000003" y="0.0" width="33" height="142"/>
+                                                                        <color key="backgroundColor" name="darkButtonText"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                        <state key="normal" title="n">
+                                                                            <color key="titleColor" name="lightButtonText"/>
+                                                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                <integer key="value" value="5"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="nButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="UmY-NK-ja6"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqa-26-lec">
+                                                                        <rect key="frame" x="234.00000000000003" y="0.0" width="32.999999999999972" height="142"/>
+                                                                        <color key="backgroundColor" name="darkButtonText"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                        <state key="normal" title="m">
+                                                                            <color key="titleColor" name="lightButtonText"/>
+                                                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                <integer key="value" value="5"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="mButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="QMJ-Gf-ks6"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofu-AM-Vpz">
+                                                                <rect key="frame" x="341" y="0.0" width="43" height="142"/>
+                                                                <color key="backgroundColor" name="standardDarkButton"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                <size key="titleShadowOffset" width="4" height="0.0"/>
+                                                                <state key="normal">
+                                                                    <color key="titleColor" name="standardDarkAppearanceButtonTint"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="delButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="g0B-JE-TQ6"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="GEQ-az-Sts" firstAttribute="width" secondItem="yt7-Wg-HDF" secondAttribute="width" multiplier="1.3" id="7DO-v3-Vfd"/>
+                                                            <constraint firstItem="ScA-Vg-WGx" firstAttribute="centerY" secondItem="A2p-tV-bD2" secondAttribute="centerY" id="DeY-c6-qT5"/>
+                                                            <constraint firstItem="ScA-Vg-WGx" firstAttribute="centerX" secondItem="A2p-tV-bD2" secondAttribute="centerX" id="cbk-5v-KjC"/>
+                                                            <constraint firstItem="Ofu-AM-Vpz" firstAttribute="width" secondItem="GEQ-az-Sts" secondAttribute="width" id="l0o-dK-ckL"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                <constraints>
+                                                    <constraint firstItem="A2p-tV-bD2" firstAttribute="leading" secondItem="eSl-gp-ojY" secondAttribute="leading" id="2HK-Cu-eFh"/>
+                                                    <constraint firstAttribute="bottom" secondItem="A2p-tV-bD2" secondAttribute="bottom" id="57a-0N-8uR"/>
+                                                    <constraint firstAttribute="trailing" secondItem="A2p-tV-bD2" secondAttribute="trailing" id="WvL-OB-o0s"/>
+                                                    <constraint firstItem="A2p-tV-bD2" firstAttribute="top" secondItem="eSl-gp-ojY" secondAttribute="top" id="lq9-aB-RCr"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BXV-2a-sZy">
+                                                <rect key="frame" x="0.0" y="616" width="384" height="142"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Iym-jK-EaE" userLabel="row4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="142"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6A-Kh-bAH">
+                                                                <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="142"/>
+                                                                <color key="backgroundColor" name="standardDarkButton"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                                <state key="normal" title="123">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPu-Kr-dTQ">
+                                                                <rect key="frame" x="82.666666666666671" y="0.0" width="218.66666666666663" height="142"/>
+                                                                <color key="backgroundColor" name="darkButtonText"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                                <state key="normal" title="space">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="spaceButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="tBu-To-CKi"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daB-SD-fDp">
+                                                                <rect key="frame" x="307.33333333333331" y="0.0" width="76.666666666666686" height="142"/>
+                                                                <color key="backgroundColor" name="standardDarkButton"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                                <state key="normal" title="return">
+                                                                    <color key="titleColor" name="lightButtonText"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="returnButton:" destination="aqG-qS-ln0" eventType="touchUpInside" id="Yko-je-Ckm"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="daB-SD-fDp" firstAttribute="width" secondItem="W6A-Kh-bAH" secondAttribute="width" id="d8Q-QO-Ap8"/>
+                                                            <constraint firstItem="W6A-Kh-bAH" firstAttribute="width" secondItem="Iym-jK-EaE" secondAttribute="width" multiplier="0.2" id="ftW-hk-jjk"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Iym-jK-EaE" secondAttribute="trailing" id="KMK-fH-d1R"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Iym-jK-EaE" secondAttribute="bottom" id="jky-2L-UGh"/>
+                                                    <constraint firstItem="Iym-jK-EaE" firstAttribute="leading" secondItem="BXV-2a-sZy" secondAttribute="leading" id="tZ0-Yq-MAa"/>
+                                                    <constraint firstItem="Iym-jK-EaE" firstAttribute="top" secondItem="BXV-2a-sZy" secondAttribute="top" id="zVg-3D-BkF"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="WGO-sa-5vh" firstAttribute="width" secondItem="XRE-n6-QgU" secondAttribute="width" id="6sK-Pi-Ksq"/>
+                                            <constraint firstAttribute="trailing" secondItem="M4v-Rj-OFx" secondAttribute="trailing" id="FA8-0d-Bpd"/>
+                                            <constraint firstItem="Zhl-ub-SeH" firstAttribute="width" secondItem="D0U-t2-oJ3" secondAttribute="width" id="Iop-7x-S2Z"/>
+                                            <constraint firstItem="oXz-RH-R2D" firstAttribute="width" secondItem="R15-Ij-Dle" secondAttribute="width" id="KcV-3b-aIy"/>
+                                            <constraint firstItem="wBg-N1-6MQ" firstAttribute="width" secondItem="Zhl-ub-SeH" secondAttribute="width" id="Ktw-kS-0T1"/>
+                                            <constraint firstAttribute="trailing" secondItem="CKu-KE-U6A" secondAttribute="trailing" id="KzU-aU-Tku"/>
+                                            <constraint firstItem="Y6Z-dt-neS" firstAttribute="width" secondItem="gSG-ts-piB" secondAttribute="width" id="M8F-y9-T5j"/>
+                                            <constraint firstAttribute="trailing" secondItem="BXV-2a-sZy" secondAttribute="trailing" id="NJ5-CB-Cgj"/>
+                                            <constraint firstItem="R15-Ij-Dle" firstAttribute="width" secondItem="gJU-0o-aFP" secondAttribute="width" id="NZT-v6-5f6"/>
+                                            <constraint firstItem="eSl-gp-ojY" firstAttribute="leading" secondItem="iDL-PX-Ap7" secondAttribute="leading" id="VKm-dg-Y3L"/>
+                                            <constraint firstItem="yt7-Wg-HDF" firstAttribute="width" secondItem="Y6Z-dt-neS" secondAttribute="width" id="XTs-hY-YEJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="eSl-gp-ojY" secondAttribute="trailing" id="ZBM-dp-oxV"/>
+                                            <constraint firstItem="iEF-VE-4OZ" firstAttribute="width" secondItem="Wbm-qX-4cD" secondAttribute="width" id="a7q-nl-YBT"/>
+                                            <constraint firstItem="Pby-Tz-nv4" firstAttribute="width" secondItem="KY5-27-sk9" secondAttribute="width" id="cK6-Q8-1lU"/>
+                                            <constraint firstItem="QCr-jq-JW8" firstAttribute="width" secondItem="t3C-fk-t86" secondAttribute="width" id="cTS-2J-vDS"/>
+                                            <constraint firstItem="iEF-VE-4OZ" firstAttribute="width" secondItem="Wbm-qX-4cD" secondAttribute="width" id="doD-ZQ-c8c"/>
+                                            <constraint firstItem="Snr-8f-8Mh" firstAttribute="width" secondItem="QCr-jq-JW8" secondAttribute="width" id="gDc-GC-057"/>
+                                            <constraint firstItem="M4v-Rj-OFx" firstAttribute="top" secondItem="iDL-PX-Ap7" secondAttribute="top" id="hEC-Su-cqt"/>
+                                            <constraint firstItem="BXV-2a-sZy" firstAttribute="leading" secondItem="iDL-PX-Ap7" secondAttribute="leading" id="jPN-N9-bbf"/>
+                                            <constraint firstItem="bqi-hT-2b9" firstAttribute="width" secondItem="rF6-Fd-Zgt" secondAttribute="width" id="lan-MI-i02"/>
+                                            <constraint firstItem="XgK-yZ-amv" firstAttribute="width" secondItem="3SQ-Th-KjE" secondAttribute="width" id="qNN-Fy-LDI"/>
+                                            <constraint firstItem="CKu-KE-U6A" firstAttribute="leading" secondItem="iDL-PX-Ap7" secondAttribute="leading" id="qQa-dM-4HI"/>
+                                            <constraint firstItem="M4v-Rj-OFx" firstAttribute="leading" secondItem="iDL-PX-Ap7" secondAttribute="leading" id="s9b-iO-DRQ"/>
+                                            <constraint firstItem="KY5-27-sk9" firstAttribute="width" secondItem="hwJ-RY-6JQ" secondAttribute="width" id="umd-4Z-yaa"/>
+                                            <constraint firstItem="3SQ-Th-KjE" firstAttribute="width" secondItem="D0z-jR-pyP" secondAttribute="width" id="xyo-Af-ynk"/>
+                                            <constraint firstItem="pqa-26-lec" firstAttribute="width" secondItem="iEF-VE-4OZ" secondAttribute="width" id="zA9-dc-DNq"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="iDL-PX-Ap7" secondAttribute="trailing" constant="3" id="I07-Yf-1IC"/>
+                                    <constraint firstItem="iDL-PX-Ap7" firstAttribute="leading" secondItem="thg-FB-9gX" secondAttribute="leading" constant="3" id="ipv-Rn-Ne3"/>
+                                    <constraint firstAttribute="bottom" secondItem="iDL-PX-Ap7" secondAttribute="bottom" id="pqv-4O-u9Q"/>
+                                    <constraint firstItem="iDL-PX-Ap7" firstAttribute="top" secondItem="thg-FB-9gX" secondAttribute="top" constant="8" id="ze0-YB-JpM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="S6K-Pc-9u9"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <color key="tintColor" systemColor="systemGray4Color"/>
+                        <constraints>
+                            <constraint firstItem="thg-FB-9gX" firstAttribute="trailing" secondItem="S6K-Pc-9u9" secondAttribute="trailing" id="1U1-ca-hxr"/>
+                            <constraint firstItem="thg-FB-9gX" firstAttribute="top" secondItem="S6K-Pc-9u9" secondAttribute="top" id="CD9-41-yMv"/>
+                            <constraint firstItem="thg-FB-9gX" firstAttribute="leading" secondItem="S6K-Pc-9u9" secondAttribute="leading" id="MrP-Zx-RCM"/>
+                            <constraint firstItem="thg-FB-9gX" firstAttribute="bottom" secondItem="S6K-Pc-9u9" secondAttribute="bottom" id="sNq-Vq-fTR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Upper" destination="GEQ-az-Sts" id="2F7-ed-XR2"/>
+                        <outlet property="a" destination="WGO-sa-5vh" id="I0s-Le-I60"/>
+                        <outlet property="b" destination="Snr-8f-8Mh" id="qG2-Nb-DK4"/>
+                        <outlet property="c" destination="wBg-N1-6MQ" id="M4m-mJ-aY3"/>
+                        <outlet property="d" destination="3SQ-Th-KjE" id="vYK-Ef-bxx"/>
+                        <outlet property="del" destination="Ofu-AM-Vpz" id="zhm-L8-6Ag"/>
+                        <outlet property="e" destination="D0z-jR-pyP" id="wPv-Dm-gWm"/>
+                        <outlet property="f" destination="Zhl-ub-SeH" id="tcx-fE-luc"/>
+                        <outlet property="g" destination="KY5-27-sk9" id="8A2-oU-GGC"/>
+                        <outlet property="h" destination="QCr-jq-JW8" id="7GN-9r-yZ5"/>
+                        <outlet property="i" destination="rF6-Fd-Zgt" id="mpg-4F-dpA"/>
+                        <outlet property="j" destination="R15-Ij-Dle" id="nht-UI-m5X"/>
+                        <outlet property="k" destination="bqi-hT-2b9" id="ywW-lE-thE"/>
+                        <outlet property="l" destination="iEF-VE-4OZ" id="vK6-2v-yST"/>
+                        <outlet property="m" destination="pqa-26-lec" id="W2k-OG-hfC"/>
+                        <outlet property="mainView" destination="6HO-Aa-CqU" id="IRq-Qc-b2f"/>
+                        <outlet property="n" destination="oXz-RH-R2D" id="vCW-P9-AJu"/>
+                        <outlet property="numb" destination="W6A-Kh-bAH" id="mLg-xN-I3e"/>
+                        <outlet property="o" destination="DC7-qX-gdd" id="J8i-NK-sJW"/>
+                        <outlet property="p" destination="Wbm-qX-4cD" id="RhN-7G-Kf8"/>
+                        <outlet property="q" destination="XRE-n6-QgU" id="mJG-z8-KhA"/>
+                        <outlet property="r" destination="D0U-t2-oJ3" id="YQx-h7-gUp"/>
+                        <outlet property="return" destination="daB-SD-fDp" id="fZC-Eo-07Q"/>
+                        <outlet property="s" destination="Y6Z-dt-neS" id="9ej-gz-lo4"/>
+                        <outlet property="space" destination="iPu-Kr-dTQ" id="rmN-uS-KWN"/>
+                        <outlet property="t" destination="hwJ-RY-6JQ" id="ZFq-3z-i02"/>
+                        <outlet property="u" destination="gJU-0o-aFP" id="z66-ss-BEu"/>
+                        <outlet property="v" destination="Pby-Tz-nv4" id="1hW-cf-jw1"/>
+                        <outlet property="viewAngka" destination="hBP-u4-Cgg" id="U7k-ac-B3Q"/>
+                        <outlet property="viewHuruf" destination="M4v-Rj-OFx" id="IQi-mI-JGx"/>
+                        <outlet property="w" destination="gSG-ts-piB" id="fIC-l5-zw4"/>
+                        <outlet property="x" destination="XgK-yZ-amv" id="CX5-yj-vrn"/>
+                        <outlet property="y" destination="t3C-fk-t86" id="VYf-5K-5Ye"/>
+                        <outlet property="z" destination="yt7-Wg-HDF" id="Q3V-7Q-e1Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LO3-ZK-6A1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-340" y="97.393364928909946"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="darkButtonText">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightButtonText">
+            <color red="0.058823529411764705" green="0.058823529411764705" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="standardDarkAppearanceButtonTint">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="standardDarkButton">
+            <color red="0.70196078431372544" green="0.71764705882352942" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
