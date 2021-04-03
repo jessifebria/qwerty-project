@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0949692618DA0700133E73 /* keyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B0949682618DA0700133E73 /* keyboard.storyboard */; };
 		5B6C614A2616117700897DAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6C61492616117700897DAF /* AppDelegate.swift */; };
 		5B6C614C2616117700897DAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6C614B2616117700897DAF /* SceneDelegate.swift */; };
 		5B6C614E2616117700897DAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6C614D2616117700897DAF /* ViewController.swift */; };
@@ -15,7 +16,6 @@
 		5B6C61562616117800897DAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6C61542616117800897DAF /* LaunchScreen.storyboard */; };
 		5B6C6165261611A700897DAF /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6C6164261611A700897DAF /* KeyboardViewController.swift */; };
 		5B6C6169261611A700897DAF /* QwertyKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5B6C6162261611A700897DAF /* QwertyKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		5B6C61712616123D00897DAF /* keyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6C61702616123D00897DAF /* keyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5B0949682618DA0700133E73 /* keyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = keyboard.storyboard; sourceTree = "<group>"; };
 		5B6C61462616117700897DAF /* QwertyProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QwertyProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6C61492616117700897DAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B6C614B2616117700897DAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +55,6 @@
 		5B6C6162261611A700897DAF /* QwertyKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QwertyKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6C6164261611A700897DAF /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		5B6C6166261611A700897DAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B6C61702616123D00897DAF /* keyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = keyboard.storyboard; path = "../../../apple/mini challenge 1/1.2/KeyboardTesting/KeyboardTest/keyboard.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +110,7 @@
 		5B6C6163261611A700897DAF /* QwertyKeyboard */ = {
 			isa = PBXGroup;
 			children = (
-				5B6C61702616123D00897DAF /* keyboard.storyboard */,
+				5B0949682618DA0700133E73 /* keyboard.storyboard */,
 				5B6C6164261611A700897DAF /* KeyboardViewController.swift */,
 				5B6C6166261611A700897DAF /* Info.plist */,
 			);
@@ -207,7 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B6C61712616123D00897DAF /* keyboard.storyboard in Resources */,
+				5B0949692618DA0700133E73 /* keyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
