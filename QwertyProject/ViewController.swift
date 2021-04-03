@@ -9,9 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var blankText: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        blankText.becomeFirstResponder()
+        print("aa")
+        // Do any additional setup afters loading the view.
     }
 
 
