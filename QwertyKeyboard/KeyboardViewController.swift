@@ -43,108 +43,140 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet weak var `return`: UIButton!
     @IBOutlet weak var numb: UIButton!
     @IBOutlet weak var Upper: UIButton!
-  
-    
-    @IBOutlet weak var viewHuruf: UIView!
-    
-    @IBOutlet weak var viewAngka: UIView!
     
     
-    @IBAction func qButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("q")
+    @IBOutlet weak var char21: UIButton!
+    @IBOutlet weak var char22: UIButton!
+    @IBOutlet weak var char23: UIButton!
+    @IBOutlet weak var char24: UIButton!
+    @IBOutlet weak var char25: UIButton!
+    @IBOutlet weak var char26: UIButton!
+    @IBOutlet weak var char27: UIButton!
+    @IBOutlet weak var char28: UIButton!
+    @IBOutlet weak var char29: UIButton!
+    @IBOutlet weak var char30: UIButton!
+    @IBOutlet weak var switchNum: UIButton!
+    
+    
+    @IBOutlet weak var stackRowTwoAlpha: UIStackView!
+    @IBOutlet weak var stackRowThreeAlpha: UIStackView!
+    @IBOutlet weak var stackRowTwoNum: UIStackView!
+    @IBOutlet weak var stackRowThreeNum: UIStackView!
+    
+    
+    
+    var outletRowOneUniversal: [UIButton] = [UIButton]()
+    var outletRowTwoNum: [UIButton] = [UIButton]()
+    var outletRowTwoAlpha: [UIButton] = [UIButton]()
+    var outletRowThreeAlpha: [UIButton] = [UIButton]()
+    var outletAllAlpha: [UIButton] = [UIButton]()
+
+    let labelRowOneAlpha = ["q","w","e","r","t","y","u","i","o","p"]
+    let labelRowOneNumFirst = ["1","2","3","4","5","6","7","8","9","0"]
+    let labelRowOneNumSecond = ["[","]","{", "}", "#", "%", "^", "*", "","="]
+    let labelRowTwoNumFirst = ["-","/",":",";",")",")","$","&","@","\""]
+    let labelRowTwoNumSecond = ["_","\\","|","~","<",">","€","£","¥","・"]
+    
+    
+    @IBAction func changeButton(_ sender: UIButton) {
+        if sender.currentTitle! == "123" {
+            stackRowTwoNum.isHidden = false
+            stackRowTwoAlpha.isHidden = true
+            stackRowThreeNum.isHidden = false
+            stackRowThreeAlpha.isHidden = true
+            
+            setCustomLabel(outletRowOneUniversal, labelRowOneNumFirst)
+            setCustomLabel(outletRowTwoNum, labelRowTwoNumFirst)
+            
+            changeLabel(sender, "ABC")
+            
+        } else {
+            stackRowTwoNum.isHidden = true
+            stackRowTwoAlpha.isHidden = false
+            stackRowThreeNum.isHidden = true
+            stackRowThreeAlpha.isHidden = false
+            
+            setCustomLabel(outletRowOneUniversal, labelRowOneAlpha)
+            setUpperLower(true)
+            
+            changeLabel(switchNum, "#+=")
+            changeLabel(sender, "123")
+        }
     }
     
-    @IBAction func wButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("w")
+    @IBAction func switchNumButton(_ sender: UIButton) {
+        if sender.currentTitle! == "#+=" {
+            setCustomLabel(outletRowOneUniversal, labelRowOneNumSecond)
+            setCustomLabel(outletRowTwoNum, labelRowTwoNumSecond)
+            changeLabel(sender, "123")
+        } else {
+            setCustomLabel(outletRowOneUniversal, labelRowOneNumFirst)
+            setCustomLabel(outletRowTwoNum, labelRowTwoNumFirst)
+            changeLabel(sender, "#+=")
+        }
     }
-    @IBAction func eButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("e")
+    
+    func setCustomLabel(_ outlet:[UIButton], _ label: [String]){
+        var i = 0
+        for button in outlet{
+            changeLabel(button, label[i])
+            i+=1
+        }
     }
-    @IBAction func rButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("r")
+    
+    func changeLabel(_ button: UIButton,_ label: String){
+        UIView.performWithoutAnimation {
+            button.setTitle(label, for: .normal)
+            button.layoutIfNeeded()
+        }
     }
-    @IBAction func tButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("t")
+    
+    
+    @IBAction func upperButton(_ sender: UIButton) {
+        let isUpper = outletAllAlpha[0].currentTitle!.uppercased() == outletAllAlpha[0].currentTitle!
+        setUpperLower(isUpper)
     }
-    @IBAction func yButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("y")
-    }
-    @IBAction func uButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("u")
-    }
-    @IBAction func iButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("i")
-    }
-    @IBAction func oButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("o")
-    }
-    @IBAction func pButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("p")
-    }
-    @IBAction func aButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("a")
-    }
-    @IBAction func sButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("s")
-    }
-    @IBAction func dButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("d")
-    }
-    @IBAction func fButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("f")
-    }
-    @IBAction func gButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("g")
-    }
-    @IBAction func hButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("h")
-    }
-    @IBAction func jButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("j")
-    }
-    @IBAction func kButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("k")
-    }
-    @IBAction func lButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("l")
-    }
-    @IBAction func zButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("z")
-    }
-    @IBAction func xButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("x")
-    }
-    @IBAction func cButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("c")
-    }
-    @IBAction func vButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("v")
-    }
-    @IBAction func bButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("b")
+    
+    func setUpperLower(_ isUpper:Bool){
+        if isUpper{
+            Upper.setImage(UIImage.init(systemName: "shift"), for: .normal)
+            Upper.backgroundColor = UIColor.systemGray2
+            Upper.tintColor = UIColor.black
+        } else {
+            Upper.setImage(UIImage.init(systemName: "shift.fill"), for: .normal)
+            Upper.backgroundColor = UIColor.white
+        }
+        
+        
+        for button in outletAllAlpha{
+            let currLabel = button.currentTitle!
+            if isUpper {
+                changeLabel(button, currLabel.lowercased())
+            } else {
+                changeLabel(button, currLabel.uppercased())
+            }
+        }
         
     }
-    @IBAction func nButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("n")
+    
+    
+    @IBAction func insertButton(_ sender: UIButton) {
+        self.textDocumentProxy.insertText(sender.currentTitle!)
     }
-    @IBAction func mButton(_ sender: UIButton) {
-        self.textDocumentProxy.insertText("m")
-    }
+    
+    
     @IBAction func spaceButton(_ sender: UIButton) {
         self.textDocumentProxy.insertText(" ")
         
+        
     }
     @IBAction func delButton(_ sender: UIButton) {
-        viewHuruf.isHidden = true
-        viewAngka.isHidden = false
-        
         self.textDocumentProxy.deleteBackward()
     }
+    
     @IBAction func returnButton(_ sender: UIButton) {
         self.textDocumentProxy.insertText("\n")
     }
-    
-    
     
     override func updateViewConstraints() {
         super.updateViewConstraints()
@@ -154,8 +186,16 @@ class KeyboardViewController: UIInputViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewAngka.isHidden = true
-        print("SUKSESS")
+        
+        outletRowOneUniversal = [q,w,e,r,t,y,u,i,o,p]
+        
+        outletRowTwoNum = [char21, char22, char23, char24, char25, char26, char27, char28, char29, char30 ]
+        
+        outletAllAlpha = [q,w,e,r,t,y,u,i,o,p,a,s,d,f,g,h,j,k,l,z,x,c,v,b,n,m]
+    
+        stackRowTwoNum.isHidden = true
+        stackRowThreeNum.isHidden = true
+        
         // Perform custom UI setup here
         self.nextKeyboardButton = UIButton(type: .system)
         
@@ -188,19 +228,21 @@ class KeyboardViewController: UIInputViewController {
         let precedingText = proxy.documentContextBeforeInput ?? ""
         let followingText = proxy.documentContextAfterInput ?? ""
         let selectedText = proxy.selectedText ?? ""
+        print("WILL CHANGE")
         fullText = "\(precedingText)\(selectedText)\(followingText)"
         
     }
     
     override func textDidChange(_ textInput: UITextInput?) {
         // The app has just changed the document's contents, the document context has been updated.
-        
+        print("DID CHANGE")
         var textColor: UIColor
         let proxy = self.textDocumentProxy
         let textBefore = proxy.documentContextBeforeInput ?? "nil18236491824before"
         let textAfter = proxy.documentContextAfterInput ?? "nil18236491824after"
+        let selectedText = proxy.selectedText ?? ""
         
-        if ((textBefore == "nil18236491824before") && (textAfter == "nil18236491824after"))  {
+        if ((fullText != selectedText) && (textBefore == "nil18236491824before") && (textAfter == "nil18236491824after"))  {
             print(fullText)
             if let parentViewController = self.parent {
                 let hostBundleID = parentViewController.value(forKey: "_hostBundleID")
